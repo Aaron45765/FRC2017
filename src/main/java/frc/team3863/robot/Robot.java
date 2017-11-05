@@ -28,8 +28,6 @@ public class Robot extends IterativeRobot {
 
     @Override
     public void teleopInit() {
-        Command driveCommand = new Drive();
-        driveCommand.start();
     }
 
     @Override

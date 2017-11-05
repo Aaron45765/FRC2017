@@ -88,6 +88,6 @@ public class Drive extends Command {
      * </p>
      */
     protected void interrupted() {
-        super.interrupted();
+
     }
 }

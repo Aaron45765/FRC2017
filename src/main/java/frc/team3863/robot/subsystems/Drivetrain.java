@@ -4,6 +4,7 @@ import com.ctre.CANTalon;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.team3863.robot.Constants;
+import frc.team3863.robot.commands.Drive;
 
 /**
  * Created by Aaron Fang on 11/5/2017.
@@ -24,6 +25,7 @@ public class Drivetrain extends Subsystem {
     public void initDefaultCommand() {
         // Set the default command, if any, for a subsystem here. Example:
         //    setDefaultCommand(new MySpecialCommand());
+        setDefaultCommand(new Drive());
     }
 
     public Drivetrain(){
