@@ -15,4 +15,13 @@ public class Constants {
     public static final int RIGHT_JOYSTICK_ID = 1;
     public static final int HIGH_GEAR_ID = 0;
     public static final int LOW_GEAR_ID = 1;
+    public static final int shooterA_ID = 0;
+    public static final int shooterB_ID = 0;
+    public static final int feeder_ID = 0;
+    public static final int intake_ID = 0;
+    public static final int blender_ID = 0;
+    public static final int hood_ID = 0;
+
+    public static final int GATE_OPEN_ID = 0;
+    public static final int GATE_CLOSED_ID = 0;
 }
