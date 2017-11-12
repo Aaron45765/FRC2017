@@ -30,6 +30,7 @@ public class ShootHigh extends Command {
     protected void execute() {
         shooter.setShooterA(3000);
         shooter.setShooterB(3000);
+        shooter.setHoodAngle(10);
         shooter.setFeeder(0.75);
         shooter.setBlender(1.00);
         shooter.setIntake(1);

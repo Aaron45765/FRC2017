@@ -9,16 +9,16 @@ import frc.team3863.robot.commands.*;
  * Created by Aaron Fang on 11/5/2017.
  */
 public class OI {
-    public Joystick throttle;
-    public Joystick direction;
-    public Joystick partner;
-    public Button quickTurn;
-    public Button highGear;
-    public Button lowGear;
-    public Button shoot;
-    public Button increaseSpeed;
-    public Button decreaseSpeed;
-    public Button disableShooter;
+    public static Joystick throttle;
+    public static Joystick direction;
+    public static Joystick partner;
+    public static Button quickTurn;
+    public static Button highGear;
+    public static Button lowGear;
+    public static Button shoot;
+    public static Button increaseSpeed;
+    public static Button decreaseSpeed;
+    public static Button disableShooter;
 
     public OI() {
         throttle = new Joystick(Constants.LEFT_JOYSTICK_ID);
