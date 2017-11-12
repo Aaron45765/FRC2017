@@ -13,6 +13,7 @@ public class Constants {
     public static final int WHEEL_SIZE = 6; //in
     public static final int LEFT_JOYSTICK_ID = 0;
     public static final int RIGHT_JOYSTICK_ID = 1;
+    public static final int PARTNER_JOYSTICK_ID = 2;
     public static final int HIGH_GEAR_ID = 0;
     public static final int LOW_GEAR_ID = 1;
     public static final int shooterA_ID = 0;

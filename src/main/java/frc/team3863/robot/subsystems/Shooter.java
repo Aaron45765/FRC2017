@@ -92,5 +92,13 @@ public class Shooter extends Subsystem {
     public void closeGate(){
         gate.set(DoubleSolenoid.Value.kReverse);
     }
+
+    public double getShooterASetpoint(){
+        return shooterA.getSetpoint();
+    }
+
+    public double getShooterBSetpoint(){
+        return shooterB.getSetpoint();
+    }
 }
 
