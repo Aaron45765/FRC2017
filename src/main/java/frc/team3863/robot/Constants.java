@@ -25,4 +25,15 @@ public class Constants {
 
     public static final int GATE_OPEN_ID = 0;
     public static final int GATE_CLOSED_ID = 0;
+
+    public static final int CAMERA_HORIZONTAL_FOV_DEGREES = 60;
+    public static final double CAMERA_HORIZONTAL_FOV_RADIANS = (CAMERA_HORIZONTAL_FOV_DEGREES * 2*Math.PI)/360;
+    public static final int CAMERA_HORIZONTAL_PIXELS = 640;
+
+    public static final double DRIVETRAIN_TRACK_WIDTH = 30; //inches
+    public static final double DRIVETRAIN_TRACK_LENGTH = 40; //inches
+    public static final double DRIVETRAIN_RADIUS = Math.sqrt(Math.pow(DRIVETRAIN_TRACK_LENGTH,2) + Math.pow(DRIVETRAIN_TRACK_WIDTH, 2));
+    public static final double DRIVETRAIN_WHEEL_DIAMETER = 6;
+    public static final double DRIVETRAIN_WHEEL_CIRCUM = DRIVETRAIN_WHEEL_DIAMETER * Math.PI;
+    public static final int DRIVETRAIN_ENC_PER_REV = 20;
 }

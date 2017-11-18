@@ -4,7 +4,10 @@ import com.ctre.CANTalon;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.team3863.robot.Constants;
+import frc.team3863.robot.OI;
 import frc.team3863.robot.commands.Drive;
+
+import static frc.team3863.robot.Robot.cheesyDriveHelper;
 
 /**
  * Created by Aaron Fang on 11/5/2017.
@@ -25,7 +28,7 @@ public class Drivetrain extends Subsystem {
     public void initDefaultCommand() {
         // Set the default command, if any, for a subsystem here. Example:
         //    setDefaultCommand(new MySpecialCommand());
-        setDefaultCommand(new Drive());
+        setDefaultCommand(new Drive(cheesyDriveHelper.cheesyDrive(OI.throttle.getY(), OI.direction.getX(), OI.quickTurn.get(), isHigh())));
     }
 
     public Drivetrain(){
@@ -94,6 +97,11 @@ public class Drivetrain extends Subsystem {
 
     public boolean isHigh(){
         return inHigh;
+    }
+
+    public void clearEncoders(){
+        rightA.setEncPosition(0);
+        leftA.setEncPosition(0);
     }
 }
 

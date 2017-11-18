@@ -1,22 +1,22 @@
 package frc.team3863.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
-import frc.team3863.robot.OI;
+import edu.wpi.first.wpilibj.networktables.NetworkTable;
+import frc.team3863.robot.Constants;
 import lib.util.DriveSignal;
 
-import static frc.team3863.robot.Robot.cheesyDriveHelper;
 import static frc.team3863.robot.Robot.drivetrain;
 
 /**
- * Created by Aaron Fang on 11/5/2017.
+ * Created by Aaron Fang on 11/18/2017.
  */
-public class Drive extends Command {
-    DriveSignal signal;
-    public Drive(DriveSignal signal) {
+public class AutoAim extends Command {
+    NetworkTable table;
+    public AutoAim() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
         requires(drivetrain);
-        this.signal = signal;
+        table = NetworkTable.getTable("GRIP/myContoursReport");
     }
 
 
@@ -25,7 +25,8 @@ public class Drive extends Command {
      * this Command is run after being started.
      */
     protected void initialize() {
-
+        drivetrain.setClosedLoop();
+        drivetrain.clearEncoders();
     }
 
 
@@ -34,8 +35,8 @@ public class Drive extends Command {
      * scheduled to run until this Command either finishes or is canceled.
      */
     protected void execute() {
-        drivetrain.setLeft(signal.getLeft());
-        drivetrain.setRight(signal.getRight());
+        drivetrain.setLeft(getLeftSetpoint());
+        drivetrain.setRight(getRightSetpoint());
     }
 
 
@@ -58,7 +59,7 @@ public class Drive extends Command {
      */
     protected boolean isFinished() {
         // TODO: Make this return true when this Command no longer needs to run execute()
-        return false;
+        return true;
     }
 
 
@@ -69,7 +70,7 @@ public class Drive extends Command {
      * command.
      */
     protected void end() {
-
+        drivetrain.setOpenLoop();
     }
 
 
@@ -88,6 +89,31 @@ public class Drive extends Command {
      * </p>
      */
     protected void interrupted() {
+        super.interrupted();
+    }
 
+    private double getOffsetRadians(){
+        double radiansPerPixel = (double)Constants.CAMERA_HORIZONTAL_FOV_RADIANS*(double)Constants.CAMERA_HORIZONTAL_PIXELS;
+        double boilerLocation = table.getNumber("boilerX", -1.0);
+        boilerLocation -= Constants.CAMERA_HORIZONTAL_PIXELS/2;
+        if (boilerLocation != -1.0){
+            double offsetDegrees = (radiansPerPixel*boilerLocation);
+            return offsetDegrees;
+        }
+        else{
+            return 0.0;
+        }
+    }
+
+    private double getRightSetpoint(){
+        //s = r*theta, but that only gives arc length, not encoder position
+        double s = Constants.DRIVETRAIN_RADIUS * getOffsetRadians();
+        s /= 2;
+        double revolutions = s/Constants.DRIVETRAIN_WHEEL_CIRCUM;
+        return revolutions * Constants.DRIVETRAIN_ENC_PER_REV;
+    }
+
+    private double getLeftSetpoint(){
+        return -getRightSetpoint();
     }
 }
