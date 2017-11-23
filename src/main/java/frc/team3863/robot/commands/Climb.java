@@ -2,16 +2,16 @@ package frc.team3863.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-import static frc.team3863.robot.Robot.shooter;
+import static frc.team3863.robot.Robot.climber;
 
 /**
- * Created by Aaron Fang on 11/10/2017.
+ * Created by Aaron Fang on 11/22/2017.
  */
-public class IntakeBalls extends Command {
-    public IntakeBalls() {
+public class Climb extends Command {
+    public Climb() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-        requires(shooter);
+        requires(climber);
     }
 
 
@@ -29,9 +29,7 @@ public class IntakeBalls extends Command {
      * scheduled to run until this Command either finishes or is canceled.
      */
     protected void execute() {
-        shooter.openGate();
-        shooter.setFeeder(-0.30);
-        shooter.setIntake(1);
+        climber.setPower(1.0);
     }
 
 
@@ -54,7 +52,7 @@ public class IntakeBalls extends Command {
      */
     protected boolean isFinished() {
         // TODO: Make this return true when this Command no longer needs to run execute()
-        return false;
+        return true;
     }
 
 

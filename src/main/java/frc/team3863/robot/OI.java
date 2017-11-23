@@ -19,6 +19,7 @@ public class OI {
     public static Button increaseSpeed;
     public static Button decreaseSpeed;
     public static Button disableShooter;
+    public static Button climber;
 
     public OI() {
         throttle = new Joystick(Constants.LEFT_JOYSTICK_ID);
@@ -31,11 +32,13 @@ public class OI {
         disableShooter = new JoystickButton(partner, 0);
         increaseSpeed = new JoystickButton(partner, 0);
         decreaseSpeed = new JoystickButton(partner, 0);
+        climber = new JoystickButton(partner, 4);
         highGear.whenPressed(new ShiftHigh());
         lowGear.whenPressed(new ShiftLow());
         shoot.whenPressed(new ShootHigh());
         disableShooter.whenPressed(new DisableShooter());
         increaseSpeed.whenPressed(new IncreaseShooterSpeed(100));
         decreaseSpeed.whenPressed(new DecreaseShooterSpeed(100));
+        climber.whenPressed(new Climb());
     }
 }
