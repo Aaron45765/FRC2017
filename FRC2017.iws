@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="281b3733-a712-4f22-bc4d-80587936d08d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/frc/team3863/robot/commands/Climb.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/frc/team3863/robot/subsystems/Climber.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FRC2017.iws" afterPath="$PROJECT_DIR$/FRC2017.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frc/team3863/robot/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team3863/robot/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frc/team3863/robot/OI.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team3863/robot/OI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frc/team3863/robot/Robot.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team3863/robot/Robot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frc/team3863/robot/commands/IntakeBalls.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team3863/robot/commands/IntakeBalls.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frc/team3863/robot/commands/AutoAim.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team3863/robot/commands/AutoAim.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frc/team3863/robot/subsystems/Drivetrain.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team3863/robot/subsystems/Drivetrain.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -68,37 +63,9 @@
       <file leaf-file-name="Drivetrain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team3863/robot/subsystems/Drivetrain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-630">
-              <caret line="30" column="94" lean-forward="true" selection-start-line="30" selection-start-column="94" selection-end-line="30" selection-end-column="94" />
+            <state relative-caret-position="442">
+              <caret line="51" column="68" lean-forward="true" selection-start-line="51" selection-start-column="68" selection-end-line="51" selection-end-column="68" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Climber.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team3863/robot/subsystems/Climber.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1041#1042#0" expanded="true" />
-                <element signature="e#1074#1075#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Climb.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team3863/robot/commands/Climb.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="43" column="93" lean-forward="true" selection-start-line="43" selection-start-column="93" selection-end-line="43" selection-end-column="93" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#735#736#0" expanded="true" />
-                <element signature="e#772#773#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -108,6 +75,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="986">
               <caret line="69" column="7" lean-forward="false" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AutoAim.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team3863/robot/commands/AutoAim.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-745">
+              <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -143,6 +120,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CheesyDriveHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lib/util/CheesyDriveHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="147" column="1" lean-forward="true" selection-start-line="147" selection-start-column="1" selection-end-line="147" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="IncreaseShooterSpeed.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team3863/robot/commands/IncreaseShooterSpeed.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -153,12 +140,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/frc/team3863/robot/Robot.java">
+      <file leaf-file-name="DriveSignal.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lib/util/DriveSignal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="408">
+              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding>
+                <element signature="e#849#850#0" expanded="true" />
+                <element signature="e#882#883#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -207,15 +197,15 @@
         <option value="$PROJECT_DIR$/src/main/java/frc/team3863/robot/commands/DecreaseShooterSpeed.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team3863/robot/subsystems/Shooter.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team3863/robot/commands/ShootHigh.java" />
-        <option value="$PROJECT_DIR$/src/main/java/frc/team3863/robot/subsystems/Drivetrain.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team3863/robot/commands/Drive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/frc/team3863/robot/commands/AutoAim.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team3863/robot/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team3863/robot/Robot.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team3863/robot/subsystems/Climber.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team3863/robot/commands/Climb.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team3863/robot/OI.java" />
         <option value="$PROJECT_DIR$/src/main/java/frc/team3863/robot/commands/IntakeBalls.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frc/team3863/robot/commands/AutoAim.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frc/team3863/robot/subsystems/Drivetrain.java" />
       </list>
     </option>
   </component>
@@ -230,10 +220,10 @@
     <option name="LAST_EDITED_TAB_NAME" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="2064" />
+    <option name="height" value="1128" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -817,15 +807,15 @@
       <workItem from="1510542862734" duration="219000" />
       <workItem from="1511033935433" duration="2627000" />
       <workItem from="1511307593178" duration="231000" />
-      <workItem from="1511418177115" duration="822000" />
+      <workItem from="1511418177115" duration="3376000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17316000" />
+    <option name="totallyTimeSpent" value="19870000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="2064" height="1128" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -834,7 +824,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3531961" sideWeight="0.51226014" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32763818" sideWeight="0.5124751" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -842,8 +832,8 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3001066" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="FRC" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3531961" sideWeight="0.48773986" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28093812" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="FRC" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32763818" sideWeight="0.48752496" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -889,8 +879,8 @@
             <element signature="e#746#747#0" expanded="false" />
             <element signature="e#778#779#0" expanded="false" />
             <element signature="e#812#813#0" expanded="false" />
-            <element signature="e#849#850#0" expanded="false" />
-            <element signature="e#882#883#0" expanded="false" />
+            <element signature="e#849#850#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
             <element signature="e#928#929#0" expanded="false" />
             <element signature="e#1025#1026#0" expanded="false" />
           </folding>
@@ -1165,8 +1155,8 @@
             <element signature="e#746#747#0" expanded="false" />
             <element signature="e#778#779#0" expanded="false" />
             <element signature="e#812#813#0" expanded="false" />
-            <element signature="e#849#850#0" expanded="false" />
-            <element signature="e#882#883#0" expanded="false" />
+            <element signature="e#849#850#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
             <element signature="e#928#929#0" expanded="false" />
             <element signature="e#1025#1026#0" expanded="false" />
           </folding>
@@ -1209,33 +1199,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lib/util/CheesyDriveHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2499">
-          <caret line="147" column="1" lean-forward="false" selection-start-line="147" selection-start-column="1" selection-end-line="147" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lib/util/DriveSignal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-          <folding>
-            <element signature="e#345#346#0" expanded="false" />
-            <element signature="e#385#386#0" expanded="false" />
-            <element signature="e#713#714#0" expanded="false" />
-            <element signature="e#746#747#0" expanded="false" />
-            <element signature="e#778#779#0" expanded="false" />
-            <element signature="e#812#813#0" expanded="false" />
-            <element signature="e#849#850#0" expanded="false" />
-            <element signature="e#882#883#0" expanded="false" />
-            <element signature="e#928#929#0" expanded="false" />
-            <element signature="e#1025#1026#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team3863/robot/subsystems/Shooter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1275">
@@ -1258,14 +1221,6 @@
             <element signature="e#2903#2904#0" expanded="false" />
             <element signature="e#2948#2949#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team3863/robot/commands/AutoAim.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="105" column="5" lean-forward="false" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1357,10 +1312,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frc/team3863/robot/commands/AutoAim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-745">
+          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lib/util/CheesyDriveHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="147" column="1" lean-forward="true" selection-start-line="147" selection-start-column="1" selection-end-line="147" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lib/util/DriveSignal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="e#849#850#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team3863/robot/subsystems/Drivetrain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-630">
-          <caret line="30" column="94" lean-forward="true" selection-start-line="30" selection-start-column="94" selection-end-line="30" selection-end-column="94" />
+        <state relative-caret-position="442">
+          <caret line="51" column="68" lean-forward="true" selection-start-line="51" selection-start-column="68" selection-end-line="51" selection-end-column="68" />
           <folding />
         </state>
       </provider>

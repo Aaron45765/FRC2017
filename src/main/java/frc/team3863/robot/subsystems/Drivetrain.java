@@ -22,6 +22,8 @@ public class Drivetrain extends Subsystem {
     CANTalon leftA;
     CANTalon leftB;
 
+    CANTalon.TalonControlMode controlMode;
+
     DoubleSolenoid shifter;
     boolean inHigh;
 
@@ -37,28 +39,38 @@ public class Drivetrain extends Subsystem {
         leftA = new CANTalon(Constants.leftDriveA_ID);
         leftB = new CANTalon(Constants.leftDriveB_ID);
 
-        rightA.changeControlMode(CANTalon.TalonControlMode.Speed);
+        controlMode = CANTalon.TalonControlMode.PercentVbus;
+
+        rightA.changeControlMode(controlMode);
         rightB.changeControlMode(CANTalon.TalonControlMode.Follower);
         rightB.set(rightA.getDeviceID());
 
-        leftA.changeControlMode(CANTalon.TalonControlMode.Speed);
+        leftA.changeControlMode(controlMode);
         leftB.changeControlMode(CANTalon.TalonControlMode.Follower);
         leftB.set(leftA.getDeviceID());
 
-        rightA.configEncoderCodesPerRev(Constants.rightDrive_Enc);
-        leftA.configEncoderCodesPerRev(Constants.leftDrive_Enc);
+        //rightA.configEncoderCodesPerRev(Constants.rightDrive_Enc);
+        //leftA.configEncoderCodesPerRev(Constants.leftDrive_Enc);
 
         shifter = new DoubleSolenoid(Constants.HIGH_GEAR_ID, Constants.LOW_GEAR_ID);
     }
 
     public void setOpenLoop(){
-        rightA.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
-        leftA.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
+        controlMode = CANTalon.TalonControlMode.PercentVbus;
+        rightA.changeControlMode(controlMode);
+        leftA.changeControlMode(controlMode);
     }
 
-    public void setClosedLoop(){
-        rightA.changeControlMode(CANTalon.TalonControlMode.Speed);
-        leftA.changeControlMode(CANTalon.TalonControlMode.Speed);
+    public void setClosedLoopSpeed(){
+        controlMode = CANTalon.TalonControlMode.Speed;
+        rightA.changeControlMode(controlMode);
+        leftA.changeControlMode(controlMode);
+    }
+
+    public void setClosedLoopPosition(){
+        controlMode = CANTalon.TalonControlMode.Position;
+        rightA.changeControlMode(controlMode);
+        leftA.changeControlMode(controlMode);
     }
 
     public void setRight(double set){

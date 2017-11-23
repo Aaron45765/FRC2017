@@ -25,7 +25,7 @@ public class AutoAim extends Command {
      * this Command is run after being started.
      */
     protected void initialize() {
-        drivetrain.setClosedLoop();
+        drivetrain.setClosedLoopPosition();
         drivetrain.clearEncoders();
     }
 
