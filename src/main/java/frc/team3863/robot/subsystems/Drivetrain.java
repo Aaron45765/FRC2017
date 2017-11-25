@@ -30,7 +30,7 @@ public class Drivetrain extends Subsystem {
     public void initDefaultCommand() {
         // Set the default command, if any, for a subsystem here. Example:
         //    setDefaultCommand(new MySpecialCommand());
-        setDefaultCommand(new Drive(cheesyDriveHelper.cheesyDrive(OI.throttle.getY(), OI.direction.getX(), OI.quickTurn.get(), isHigh())));
+        setDefaultCommand(new Drive());
     }
 
     public Drivetrain(){
@@ -49,8 +49,11 @@ public class Drivetrain extends Subsystem {
         leftB.changeControlMode(CANTalon.TalonControlMode.Follower);
         leftB.set(leftA.getDeviceID());
 
-        //rightA.configEncoderCodesPerRev(Constants.rightDrive_Enc);
-        //leftA.configEncoderCodesPerRev(Constants.leftDrive_Enc);
+        rightA.configEncoderCodesPerRev(Constants.rightDrive_Enc);
+        leftA.configEncoderCodesPerRev(Constants.leftDrive_Enc);
+
+        rightA.setInverted(true);
+        leftA.setInverted(false);
 
         shifter = new DoubleSolenoid(Constants.HIGH_GEAR_ID, Constants.LOW_GEAR_ID);
     }

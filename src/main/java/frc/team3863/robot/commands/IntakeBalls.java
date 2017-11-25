@@ -54,7 +54,7 @@ public class IntakeBalls extends Command {
      */
     protected boolean isFinished() {
         // TODO: Make this return true when this Command no longer needs to run execute()
-        return false;
+        return true;
     }
 
 
@@ -65,7 +65,9 @@ public class IntakeBalls extends Command {
      * command.
      */
     protected void end() {
-
+        shooter.setIntake(0);
+        shooter.setFeeder(0);
+        shooter.closeGate();
     }
 
 

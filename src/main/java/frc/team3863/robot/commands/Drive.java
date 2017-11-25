@@ -12,11 +12,10 @@ import static frc.team3863.robot.Robot.drivetrain;
  */
 public class Drive extends Command {
     DriveSignal signal;
-    public Drive(DriveSignal signal) {
+    public Drive() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
         requires(drivetrain);
-        this.signal = signal;
     }
 
 
@@ -34,6 +33,7 @@ public class Drive extends Command {
      * scheduled to run until this Command either finishes or is canceled.
      */
     protected void execute() {
+        signal = cheesyDriveHelper.cheesyDrive(OI.throttle.getY(), OI.direction.getX(), OI.quickTurn.get(), drivetrain.isHigh());
         drivetrain.setLeft(signal.getLeft());
         drivetrain.setRight(signal.getRight());
     }

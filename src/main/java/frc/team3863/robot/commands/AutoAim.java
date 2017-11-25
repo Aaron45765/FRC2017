@@ -110,7 +110,7 @@ public class AutoAim extends Command {
         double s = Constants.DRIVETRAIN_RADIUS * getOffsetRadians();
         s /= 2;
         double revolutions = s/Constants.DRIVETRAIN_WHEEL_CIRCUM;
-        return revolutions * Constants.DRIVETRAIN_ENC_PER_REV;
+        return revolutions;
     }
 
     private double getLeftSetpoint(){
