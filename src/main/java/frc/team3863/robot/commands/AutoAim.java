@@ -17,6 +17,7 @@ public class AutoAim extends Command {
     double p = 0.0;
     double i = 0.0;
     double d = 0.0;
+    double setpoint;
     public AutoAim() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
@@ -34,8 +35,9 @@ public class AutoAim extends Command {
         rotationControl = new PIDController(p, i, d, drivetrain.getGyro(), drivetrain);
         rotationControl.setInputRange(-180, 180);
         rotationControl.setOutputRange(-1.0, 1.0);
-        rotationControl.setAbsoluteTolerance(1.0);
+        rotationControl.setAbsoluteTolerance(0.5);
         rotationControl.enable();
+        setpoint = drivetrain.getAngle() - getOffsetDegrees();
     }
 
 
@@ -44,7 +46,7 @@ public class AutoAim extends Command {
      * scheduled to run until this Command either finishes or is canceled.
      */
     protected void execute() {
-        rotationControl.setSetpoint(drivetrain.getAngle() + getOffsetDegrees());
+        rotationControl.setSetpoint(setpoint);
     }
 
 
