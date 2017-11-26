@@ -35,6 +35,7 @@ public class AutoAim extends Command {
         rotationControl.setInputRange(-180, 180);
         rotationControl.setOutputRange(-1.0, 1.0);
         rotationControl.setAbsoluteTolerance(1.0);
+        rotationControl.enable();
     }
 
 
@@ -66,7 +67,7 @@ public class AutoAim extends Command {
      */
     protected boolean isFinished() {
         // TODO: Make this return true when this Command no longer needs to run execute()
-        return true;
+        return rotationControl.onTarget();
     }
 
 
@@ -78,6 +79,7 @@ public class AutoAim extends Command {
      */
     protected void end() {
         drivetrain.setOpenLoop();
+        rotationControl.disable();
     }
 
 
