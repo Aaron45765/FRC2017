@@ -1,7 +1,8 @@
 package frc.team3863.robot.subsystems;
 
 import com.ctre.CANTalon;
-import edu.wpi.first.wpilibj.DoubleSolenoid;
+import com.kauailabs.navx.frc.AHRS;
+import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.team3863.robot.Constants;
 import frc.team3863.robot.OI;
@@ -12,7 +13,7 @@ import static frc.team3863.robot.Robot.cheesyDriveHelper;
 /**
  * Created by Aaron Fang on 11/5/2017.
  */
-public class Drivetrain extends Subsystem {
+public class Drivetrain extends Subsystem implements PIDOutput {
 
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
@@ -26,6 +27,8 @@ public class Drivetrain extends Subsystem {
 
     DoubleSolenoid shifter;
     boolean inHigh;
+
+    AHRS gyro;
 
     public void initDefaultCommand() {
         // Set the default command, if any, for a subsystem here. Example:
@@ -56,6 +59,8 @@ public class Drivetrain extends Subsystem {
         leftA.setInverted(false);
 
         shifter = new DoubleSolenoid(Constants.HIGH_GEAR_ID, Constants.LOW_GEAR_ID);
+
+        gyro = new AHRS(SerialPort.Port.kUSB);
     }
 
     public void setOpenLoop(){
@@ -117,6 +122,19 @@ public class Drivetrain extends Subsystem {
     public void clearEncoders(){
         rightA.setEncPosition(0);
         leftA.setEncPosition(0);
+    }
+
+    public double getAngle(){
+        return gyro.getAngle();
+    }
+
+    public AHRS getGyro(){
+        return gyro;
+    }
+
+    public void pidWrite(double value){
+        setRight(value);
+        setLeft(-value);
     }
 }
 

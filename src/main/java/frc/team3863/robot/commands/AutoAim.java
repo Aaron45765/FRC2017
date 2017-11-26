@@ -4,6 +4,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import frc.team3863.robot.Constants;
 import lib.util.DriveSignal;
+import edu.wpi.first.wpilibj.PIDController;
 
 import static frc.team3863.robot.Robot.drivetrain;
 
@@ -12,6 +13,10 @@ import static frc.team3863.robot.Robot.drivetrain;
  */
 public class AutoAim extends Command {
     NetworkTable table;
+    PIDController rotationControl;
+    double p = 0.0;
+    double i = 0.0;
+    double d = 0.0;
     public AutoAim() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
@@ -25,8 +30,11 @@ public class AutoAim extends Command {
      * this Command is run after being started.
      */
     protected void initialize() {
-        drivetrain.setClosedLoopPosition();
-        drivetrain.clearEncoders();
+        drivetrain.setOpenLoop();
+        rotationControl = new PIDController(p, i, d, drivetrain.getGyro(), drivetrain);
+        rotationControl.setInputRange(-180, 180);
+        rotationControl.setOutputRange(-1.0, 1.0);
+        rotationControl.setAbsoluteTolerance(1.0);
     }
 
 
@@ -35,8 +43,7 @@ public class AutoAim extends Command {
      * scheduled to run until this Command either finishes or is canceled.
      */
     protected void execute() {
-        drivetrain.setLeft(getLeftSetpoint());
-        drivetrain.setRight(getRightSetpoint());
+        rotationControl.setSetpoint(drivetrain.getAngle() + getOffsetDegrees());
     }
 
 
@@ -92,8 +99,8 @@ public class AutoAim extends Command {
         super.interrupted();
     }
 
-    private double getOffsetRadians(){
-        double radiansPerPixel = (double)Constants.CAMERA_HORIZONTAL_FOV_RADIANS*(double)Constants.CAMERA_HORIZONTAL_PIXELS;
+    private double getOffsetDegrees(){
+        double radiansPerPixel = (double)Constants.CAMERA_HORIZONTAL_FOV_DEGREES*(double)Constants.CAMERA_HORIZONTAL_PIXELS;
         double boilerLocation = table.getNumber("boilerX", -1.0);
         boilerLocation -= Constants.CAMERA_HORIZONTAL_PIXELS/2;
         if (boilerLocation != -1.0){
@@ -105,15 +112,4 @@ public class AutoAim extends Command {
         }
     }
 
-    private double getRightSetpoint(){
-        //s = r*theta, but that only gives arc length, not encoder position
-        double s = Constants.DRIVETRAIN_RADIUS * getOffsetRadians();
-        s /= 2;
-        double revolutions = s/Constants.DRIVETRAIN_WHEEL_CIRCUM;
-        return revolutions;
-    }
-
-    private double getLeftSetpoint(){
-        return -getRightSetpoint();
-    }
 }
