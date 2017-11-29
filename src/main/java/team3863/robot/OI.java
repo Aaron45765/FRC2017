@@ -25,7 +25,7 @@ public class OI {
         throttle = new Joystick(Constants.LEFT_JOYSTICK_ID);
         direction = new Joystick(Constants.RIGHT_JOYSTICK_ID);
         partner = new Joystick(Constants.PARTNER_JOYSTICK_ID);
-        quickTurn = new JoystickButton(direction, 2);
+        quickTurn = new JoystickButton(partner, 12);
         highGear = new JoystickButton(direction, 1);
         lowGear = new JoystickButton(throttle, 1);
         shoot = new JoystickButton(partner, 0);

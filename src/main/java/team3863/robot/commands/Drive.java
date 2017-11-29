@@ -1,5 +1,6 @@
 package team3863.robot.commands;
 
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Command;
 import team3863.robot.OI;
 import lib.util.DriveSignal;
@@ -33,7 +34,7 @@ public class Drive extends Command {
      * scheduled to run until this Command either finishes or is canceled.
      */
     protected void execute() {
-        signal = cheesyDriveHelper.cheesyDrive(OI.throttle.getY(), OI.direction.getX(), OI.quickTurn.get(), drivetrain.isHigh());
+        signal = cheesyDriveHelper.cheesyDrive(OI.partner.getY(), -OI.partner.getZ(), OI.quickTurn.get(), drivetrain.isHigh());
         drivetrain.setLeft(signal.getLeft());
         drivetrain.setRight(signal.getRight());
     }

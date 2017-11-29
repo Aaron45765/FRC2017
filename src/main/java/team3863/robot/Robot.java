@@ -1,10 +1,7 @@
 package team3863.robot;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
-import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import team3863.robot.commands.Drive;
 import team3863.robot.subsystems.Climber;
 import team3863.robot.subsystems.Drivetrain;
 import team3863.robot.subsystems.Shooter;
@@ -13,12 +10,12 @@ import lib.util.CheesyDriveHelper;
 public class Robot extends IterativeRobot {
     public static final CheesyDriveHelper cheesyDriveHelper = new CheesyDriveHelper();
     public static final Drivetrain drivetrain = new Drivetrain();
-    public static final OI oi = new OI();
+    public OI oi;
     public static final Shooter shooter = new Shooter();
     public static final Climber climber = new Climber();
     @Override
     public void robotInit() {
-
+        oi = new OI();
     }
 
     /**
@@ -70,7 +67,6 @@ public class Robot extends IterativeRobot {
      */
     @Override
     public void teleopPeriodic() {
-        LiveWindow.run();
         Scheduler.getInstance().run();
     }
 
@@ -79,6 +75,5 @@ public class Robot extends IterativeRobot {
      */
     @Override
     public void testPeriodic() {
-        LiveWindow.run();
     }
 }
