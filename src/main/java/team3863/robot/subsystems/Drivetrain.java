@@ -5,10 +5,7 @@ import com.kauailabs.navx.frc.AHRS;
 import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import team3863.robot.Constants;
-import team3863.robot.OI;
-import team3863.robot.commands.Drive;
-
-import static team3863.robot.Robot.cheesyDriveHelper;
+import team3863.robot.commands.CheesyDrive;
 
 /**
  * Created by Aaron Fang on 11/5/2017.
@@ -33,7 +30,7 @@ public class Drivetrain extends Subsystem implements PIDOutput {
     public void initDefaultCommand() {
         // Set the default command, if any, for a subsystem here. Example:
         //    setDefaultCommand(new MySpecialCommand());
-        setDefaultCommand(new Drive());
+        setDefaultCommand(new CheesyDrive());
     }
 
     public Drivetrain(){

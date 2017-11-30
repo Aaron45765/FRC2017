@@ -4,16 +4,15 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Command;
 import team3863.robot.OI;
 import lib.util.DriveSignal;
-
 import static team3863.robot.Robot.cheesyDriveHelper;
 import static team3863.robot.Robot.drivetrain;
 
 /**
  * Created by Aaron Fang on 11/5/2017.
  */
-public class Drive extends Command {
+public class CheesyDrive extends Command {
     DriveSignal signal;
-    public Drive() {
+    public CheesyDrive() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
         requires(drivetrain);
@@ -34,7 +33,7 @@ public class Drive extends Command {
      * scheduled to run until this Command either finishes or is canceled.
      */
     protected void execute() {
-        signal = cheesyDriveHelper.cheesyDrive(OI.partner.getY(), -OI.partner.getZ(), OI.quickTurn.get(), drivetrain.isHigh());
+        signal = cheesyDriveHelper.cheesyDrive(OI.getForwardThrottle(), OI.getTurningThrottle(), OI.quickTurn.get(), drivetrain.isHigh());
         drivetrain.setLeft(signal.getLeft());
         drivetrain.setRight(signal.getRight());
     }

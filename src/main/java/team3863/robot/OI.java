@@ -41,4 +41,18 @@ public class OI {
         decreaseSpeed.whenPressed(new DecreaseShooterSpeed(100));
         climber.whenPressed(new Climb());
     }
+
+    public static double getForwardThrottle(){
+        double sign = Math.signum(partner.getY());
+        return sign * Math.pow(partner.getY(), 2);
+    }
+
+    public static double getTurningThrottle(){
+        double sign = Math.signum(partner.getZ());
+        double forwardThrottleSign = Math.signum(getForwardThrottle());
+        if(forwardThrottleSign == -1)
+            return sign * Math.pow(partner.getZ(), 2);
+        else
+            return -sign * Math.pow(partner.getZ(), 2);
+    }
 }
