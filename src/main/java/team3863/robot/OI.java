@@ -28,11 +28,11 @@ public class OI {
         quickTurn = new JoystickButton(partner, 12);
         highGear = new JoystickButton(direction, 1);
         lowGear = new JoystickButton(throttle, 1);
-        shoot = new JoystickButton(partner, 0);
-        disableShooter = new JoystickButton(partner, 0);
+        shoot = new JoystickButton(partner, 4);
+        disableShooter = new JoystickButton(partner, 1);
         increaseSpeed = new JoystickButton(partner, 0);
         decreaseSpeed = new JoystickButton(partner, 0);
-        climber = new JoystickButton(partner, 4);
+        climber = new JoystickButton(partner, 0);
         highGear.whenPressed(new ShiftHigh());
         lowGear.whenPressed(new ShiftLow());
         shoot.whenPressed(new ShootHigh());

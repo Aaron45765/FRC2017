@@ -63,7 +63,7 @@ public class Drivetrain extends Subsystem implements PIDOutput {
 
         shifter = new DoubleSolenoid(Constants.HIGH_GEAR_ID, Constants.LOW_GEAR_ID);
 
-        //gyro = new AHRS(SerialPort.Port.kUSB);
+        gyro = new AHRS(SerialPort.Port.kUSB);
     }
 
     public void setOpenLoop(){

@@ -1,5 +1,6 @@
 package team3863.robot;
 
+import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import team3863.robot.subsystems.Climber;
@@ -16,6 +17,7 @@ public class Robot extends IterativeRobot {
     @Override
     public void robotInit() {
         oi = new OI();
+        CameraServer.getInstance().startAutomaticCapture();
     }
 
     /**
