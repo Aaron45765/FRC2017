@@ -14,14 +14,14 @@ public class Shooter extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
-    private final double shooterA_P = 0.0;
+    private final double shooterA_P = 0.8525;
     private final double shooterA_I = 0.0;
     private final double shooterA_D = 0.0;
-    private final double shooterA_F = 0.0;
-    private final double shooterB_P = 0.0;
+    private final double shooterA_F = 1.5345;
+    private final double shooterB_P = 0.8525;
     private final double shooterB_I = 0.0;
     private final double shooterB_D = 0.0;
-    private final double shooterB_F = 0.0;
+    private final double shooterB_F = 1.5345;
     private final double hood_P = 0.0;
     private final double hood_I = 0.0;
     private final double hood_D = 0.0;
@@ -51,6 +51,8 @@ public class Shooter extends Subsystem {
         hood.changeControlMode(CANTalon.TalonControlMode.Position);
         hood.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Absolute);
 
+        feeder.setInverted(true);
+
         gate = new DoubleSolenoid(Constants.GATE_OPEN_ID, Constants.GATE_CLOSED_ID);
     }
 
@@ -67,6 +69,13 @@ public class Shooter extends Subsystem {
         shooterB.set(rpm);
     }
 
+    public double getShooterASpeed(){
+        return shooterA.getSpeed();
+    }
+
+    public double getShooterBSpeed(){
+        return shooterB.getSpeed();
+    }
     public void setFeeder(double set) {
         feeder.set(set);
     }
@@ -97,6 +106,14 @@ public class Shooter extends Subsystem {
 
     public double getShooterBSetpoint() {
         return shooterB.getSetpoint();
+    }
+
+    public double getShooterAError(){
+        return shooterA.getError();
+    }
+
+    public double getShooterBError(){
+        return shooterB.getError();
     }
 }
 
