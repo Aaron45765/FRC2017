@@ -67,6 +67,7 @@ public class Drivetrain extends Subsystem implements PIDOutput {
 
         shifter = new DoubleSolenoid(Constants.HIGH_GEAR_ID, Constants.LOW_GEAR_ID);
 
+
         rightA.setProfile(0);
         leftA.setProfile(0);
         rightA.setPID(right_low_constants.getkP(), right_low_constants.getkI(), right_low_constants.getkD());
@@ -82,7 +83,8 @@ public class Drivetrain extends Subsystem implements PIDOutput {
         leftA.setF(left_high_constants.getkF());
 
         setLow();
-        //gyro = new AHRS(SerialPort.Port.kUSB);
+        gyro = new AHRS(SerialPort.Port.kUSB);
+
     }
 
     public void setOpenLoop(){

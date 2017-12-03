@@ -30,8 +30,8 @@ public class Constants {
     public static final int blender_ID = 4;
     public static final int hood_ID = 5;
 
-    public static final int GATE_OPEN_ID = 2;
-    public static final int GATE_CLOSED_ID = 3;
+    public static final int GATE_OPEN_ID = 3;
+    public static final int GATE_CLOSED_ID = 2;
 
     public static final int CAMERA_HORIZONTAL_FOV_DEGREES = 60;
     public static final double CAMERA_HORIZONTAL_FOV_RADIANS = (CAMERA_HORIZONTAL_FOV_DEGREES * 2*Math.PI)/360;

@@ -1,6 +1,7 @@
 package team3863.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import static team3863.robot.Robot.shooter;
 
@@ -28,13 +29,18 @@ public class ShootHigh extends Command {
      * scheduled to run until this Command either finishes or is canceled.
      */
     protected void execute() {
-        shooter.setShooterA(3000);
-        shooter.setShooterB(3000);
+        shooter.setShooterA(3200);
+        shooter.setShooterB(3200);
         shooter.setHoodAngle(10);
         shooter.setFeeder(0.75);
         shooter.setBlender(1.00);
         shooter.setIntake(1);
         shooter.openGate();
+
+        SmartDashboard.putNumber("Shooter A Speed", shooter.getShooterASpeed());
+        SmartDashboard.putNumber("Shooter A Error", shooter.getShooterAError());
+
+        SmartDashboard.putNumber("Shooter B Error", shooter.getShooterBError());
     }
 
 
@@ -57,7 +63,7 @@ public class ShootHigh extends Command {
      */
     protected boolean isFinished() {
         // TODO: Make this return true when this Command no longer needs to run execute()
-        return true;
+        return false;
     }
 
 
