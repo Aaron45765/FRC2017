@@ -43,4 +43,5 @@ public class Constants {
     public static final double DRIVETRAIN_WHEEL_DIAMETER = 6;
     public static final double DRIVETRAIN_WHEEL_CIRCUM = DRIVETRAIN_WHEEL_DIAMETER * Math.PI;
     public static final int DRIVETRAIN_ENC_PER_REV = 20;
+    public static final double DRIVETRAIN_LOW_SPEED = 1;
 }

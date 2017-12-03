@@ -81,6 +81,7 @@ public class Drivetrain extends Subsystem implements PIDOutput {
         leftA.setPID(left_high_constants.getkP(), left_high_constants.getkI(), left_high_constants.getkD());
         leftA.setF(left_high_constants.getkF());
 
+        setLow();
         //gyro = new AHRS(SerialPort.Port.kUSB);
     }
 
@@ -127,11 +128,15 @@ public class Drivetrain extends Subsystem implements PIDOutput {
     }
 
     public void setHigh(){
+        rightA.setProfile(1);
+        leftA.setProfile(1);
         shifter.set(DoubleSolenoid.Value.kForward);
         inHigh = true;
     }
 
     public void setLow(){
+        rightA.setProfile(0);
+        leftA.setProfile(0);
         shifter.set(DoubleSolenoid.Value.kReverse);
         inHigh = false;
     }
@@ -157,5 +162,26 @@ public class Drivetrain extends Subsystem implements PIDOutput {
         setRight(value);
         setLeft(-value);
     }
+
+    //where vel is from 0.0-1.0
+    public void setDriveVel(double leftVel, double rightVel){
+        if(controlMode.equals(CANTalon.TalonControlMode.Speed)) {
+            if ((Math.abs(leftVel * Constants.DRIVETRAIN_HIGH_SPEED) > Constants.DRIVETRAIN_LOW_SPEED) || (Math.abs(rightVel * Constants.DRIVETRAIN_HIGH_SPEED) > Constants.DRIVETRAIN_LOW_SPEED)) {
+                setHigh();
+                setRight(rightVel);
+                setLeft(leftVel);
+            } else {
+                setLow();
+                setRight(rightVel);
+                setLeft(leftVel);
+            }
+        }
+        else{
+            setRight(rightVel);
+            setLeft(leftVel);
+        }
+
+    }
+
 }
 
