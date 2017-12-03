@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="281b3733-a712-4f22-bc4d-80587936d08d" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/team3863/robot/commands/Drive.java" afterPath="$PROJECT_DIR$/src/main/java/team3863/robot/commands/CheesyDrive.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FRC2017.iml" afterPath="$PROJECT_DIR$/FRC2017.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FRC2017.ipr" afterPath="$PROJECT_DIR$/FRC2017.ipr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/lib/util/PIDConstant.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FRC2017.iws" afterPath="$PROJECT_DIR$/FRC2017.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lib/util/CheesyDriveHelper.java" afterPath="$PROJECT_DIR$/src/main/java/lib/util/CheesyDriveHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/team3863/robot/OI.java" afterPath="$PROJECT_DIR$/src/main/java/team3863/robot/OI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/team3863/robot/subsystems/Drivetrain.java" afterPath="$PROJECT_DIR$/src/main/java/team3863/robot/subsystems/Drivetrain.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -65,13 +61,60 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/team3863/robot/Robot.java">
+      <file leaf-file-name="Shooter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/team3863/robot/subsystems/Shooter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="76" column="32" lean-forward="false" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
+            <state relative-caret-position="493">
+              <caret line="32" column="55" lean-forward="false" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#2211#2212#0" expanded="false" />
+                <element signature="e#2244#2245#0" expanded="false" />
+                <element signature="e#2287#2288#0" expanded="false" />
+                <element signature="e#2320#2321#0" expanded="false" />
+                <element signature="e#2361#2362#0" expanded="false" />
+                <element signature="e#2392#2393#0" expanded="false" />
+                <element signature="e#2433#2434#0" expanded="false" />
+                <element signature="e#2464#2465#0" expanded="false" />
+                <element signature="e#2506#2507#0" expanded="false" />
+                <element signature="e#2538#2539#0" expanded="false" />
+                <element signature="e#2623#2624#0" expanded="false" />
+                <element signature="e#2678#2679#0" expanded="false" />
+                <element signature="e#2709#2710#0" expanded="false" />
+                <element signature="e#2764#2765#0" expanded="false" />
+                <element signature="e#2807#2808#0" expanded="false" />
+                <element signature="e#2852#2853#0" expanded="false" />
+                <element signature="e#2895#2896#0" expanded="false" />
+                <element signature="e#2940#2941#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Drivetrain.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/team3863/robot/subsystems/Drivetrain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="62" column="39" lean-forward="true" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PIDConstant.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lib/util/PIDConstant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <element signature="e#450#451#0" expanded="true" />
+                <element signature="e#475#476#0" expanded="true" />
+                <element signature="e#504#505#0" expanded="true" />
+                <element signature="e#529#530#0" expanded="true" />
+                <element signature="e#558#559#0" expanded="true" />
+                <element signature="e#583#584#0" expanded="true" />
+                <element signature="e#612#613#0" expanded="true" />
+                <element signature="e#637#638#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,16 +156,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DecreaseShooterSpeed.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/team3863/robot/commands/DecreaseShooterSpeed.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DisableShooter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/team3863/robot/commands/DisableShooter.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -133,7 +166,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AutoAim.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AutoAim.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/team3863/robot/commands/AutoAim.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
@@ -150,16 +183,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
               <caret line="45" column="22" lean-forward="false" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CheesyDriveHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/lib/util/CheesyDriveHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="66" column="27" lean-forward="true" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -223,7 +246,6 @@
         <option value="$PROJECT_DIR$/src/main/java/frc/team3863/robot/subsystems/Drivetrain.java" />
         <option value="$PROJECT_DIR$/src/main/java/team3863/robot/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/team3863/robot/subsystems/Shooter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/team3863/robot/subsystems/Drivetrain.java" />
         <option value="$PROJECT_DIR$/src/main/java/team3863/robot/subsystems/Climber.java" />
         <option value="$PROJECT_DIR$/src/main/java/team3863/robot/commands/AutoAim.java" />
         <option value="$PROJECT_DIR$/src/main/java/team3863/robot/commands/Climb.java" />
@@ -239,6 +261,8 @@
         <option value="$PROJECT_DIR$/src/main/java/team3863/robot/commands/Drive.java" />
         <option value="$PROJECT_DIR$/src/main/java/team3863/robot/commands/CheesyDrive.java" />
         <option value="$PROJECT_DIR$/src/main/java/team3863/robot/OI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lib/util/PIDConstant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/team3863/robot/subsystems/Drivetrain.java" />
       </list>
     </option>
   </component>
@@ -866,12 +890,12 @@
       <workItem from="1511675856103" duration="5028000" />
       <workItem from="1511734068396" duration="808000" />
       <workItem from="1512006311523" duration="75000" />
-      <workItem from="1512006411557" duration="2353000" />
+      <workItem from="1512006411557" duration="5788000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31630000" />
+    <option name="totallyTimeSpent" value="35065000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -927,14 +951,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/lib/util/CheesyDriveHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team3863/robot/Robot.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team3863/robot/Constants.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team3863/robot/subsystems/Drivetrain.java" />
@@ -1004,13 +1020,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/team3863/robot/subsystems/Drivetrain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/team3863/robot/commands/IncreaseShooterSpeed.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1064,33 +1073,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/team3863/robot/subsystems/Shooter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="55" lean-forward="false" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
-          <folding>
-            <element signature="e#2211#2212#0" expanded="false" />
-            <element signature="e#2244#2245#0" expanded="false" />
-            <element signature="e#2287#2288#0" expanded="false" />
-            <element signature="e#2320#2321#0" expanded="false" />
-            <element signature="e#2361#2362#0" expanded="false" />
-            <element signature="e#2392#2393#0" expanded="false" />
-            <element signature="e#2433#2434#0" expanded="false" />
-            <element signature="e#2464#2465#0" expanded="false" />
-            <element signature="e#2506#2507#0" expanded="false" />
-            <element signature="e#2538#2539#0" expanded="false" />
-            <element signature="e#2623#2624#0" expanded="false" />
-            <element signature="e#2678#2679#0" expanded="false" />
-            <element signature="e#2709#2710#0" expanded="false" />
-            <element signature="e#2764#2765#0" expanded="false" />
-            <element signature="e#2807#2808#0" expanded="false" />
-            <element signature="e#2852#2853#0" expanded="false" />
-            <element signature="e#2895#2896#0" expanded="false" />
-            <element signature="e#2940#2941#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/team3863/robot/Robot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1156">
@@ -1104,7 +1086,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/lib/util/CheesyDriveHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
-          <caret line="66" column="27" lean-forward="true" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
+          <caret line="66" column="27" lean-forward="false" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1178,6 +1160,59 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team3863/robot/subsystems/Shooter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="32" column="55" lean-forward="false" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2211#2212#0" expanded="false" />
+            <element signature="e#2244#2245#0" expanded="false" />
+            <element signature="e#2287#2288#0" expanded="false" />
+            <element signature="e#2320#2321#0" expanded="false" />
+            <element signature="e#2361#2362#0" expanded="false" />
+            <element signature="e#2392#2393#0" expanded="false" />
+            <element signature="e#2433#2434#0" expanded="false" />
+            <element signature="e#2464#2465#0" expanded="false" />
+            <element signature="e#2506#2507#0" expanded="false" />
+            <element signature="e#2538#2539#0" expanded="false" />
+            <element signature="e#2623#2624#0" expanded="false" />
+            <element signature="e#2678#2679#0" expanded="false" />
+            <element signature="e#2709#2710#0" expanded="false" />
+            <element signature="e#2764#2765#0" expanded="false" />
+            <element signature="e#2807#2808#0" expanded="false" />
+            <element signature="e#2852#2853#0" expanded="false" />
+            <element signature="e#2895#2896#0" expanded="false" />
+            <element signature="e#2940#2941#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lib/util/PIDConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="e#450#451#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#558#559#0" expanded="true" />
+            <element signature="e#583#584#0" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team3863/robot/subsystems/Drivetrain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="62" column="39" lean-forward="true" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>

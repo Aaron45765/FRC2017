@@ -4,6 +4,7 @@ import com.ctre.CANTalon;
 import com.kauailabs.navx.frc.AHRS;
 import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import lib.util.PIDConstant;
 import team3863.robot.Constants;
 import team3863.robot.commands.CheesyDrive;
 
@@ -26,6 +27,12 @@ public class Drivetrain extends Subsystem implements PIDOutput {
     boolean inHigh;
 
     AHRS gyro;
+
+    private PIDConstant right_low_constants = new PIDConstant(0.0, 0.0, 0.0, 0.0);
+    private PIDConstant right_high_constants = new PIDConstant(0.0, 0.0, 0.0, 0.0);
+    private PIDConstant left_low_constants = new PIDConstant(0.0, 0.0, 0.0, 0.0);
+    private PIDConstant left_high_constants = new PIDConstant(0.0, 0.0, 0.0, 0.0);
+
 
     public void initDefaultCommand() {
         // Set the default command, if any, for a subsystem here. Example:
@@ -59,6 +66,20 @@ public class Drivetrain extends Subsystem implements PIDOutput {
         leftA.setInverted(false);
 
         shifter = new DoubleSolenoid(Constants.HIGH_GEAR_ID, Constants.LOW_GEAR_ID);
+
+        rightA.setProfile(0);
+        leftA.setProfile(0);
+        rightA.setPID(right_low_constants.getkP(), right_low_constants.getkI(), right_low_constants.getkD());
+        rightA.setF(right_low_constants.getkF());
+        leftA.setPID(left_low_constants.getkP(), left_low_constants.getkI(), left_low_constants.getkD());
+        leftA.setF(left_low_constants.getkF());
+
+        rightA.setProfile(1);
+        leftA.setProfile(1);
+        rightA.setPID(right_high_constants.getkP(), right_high_constants.getkI(), right_high_constants.getkD());
+        rightA.setF(right_high_constants.getkF());
+        leftA.setPID(left_high_constants.getkP(), left_high_constants.getkI(), left_high_constants.getkD());
+        leftA.setF(left_high_constants.getkF());
 
         //gyro = new AHRS(SerialPort.Port.kUSB);
     }
