@@ -59,8 +59,8 @@ public class Drivetrain extends Subsystem implements PIDOutput {
         rightA.configEncoderCodesPerRev(Constants.rightDrive_Enc);
         leftA.configEncoderCodesPerRev(Constants.leftDrive_Enc);
 
-        rightA.setVoltageRampRate(10.0);
-        leftA.setVoltageRampRate(10.0);
+        rightA.setCurrentLimit(35);
+        leftA.setCurrentLimit(35);
 
         rightA.setInverted(true);
         leftA.setInverted(false);
