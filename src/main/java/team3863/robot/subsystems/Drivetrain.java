@@ -61,6 +61,8 @@ public class Drivetrain extends Subsystem implements PIDOutput {
 
         rightA.setCurrentLimit(35);
         leftA.setCurrentLimit(35);
+        rightA.EnableCurrentLimit(true);
+        leftA.EnableCurrentLimit(true);
 
         rightA.setInverted(true);
         leftA.setInverted(false);
