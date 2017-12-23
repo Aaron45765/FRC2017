@@ -7,10 +7,10 @@ import team3863.robot.commands.*;
 
 /**
  * Created by Aaron Fang on 11/5/2017.
+ * Configured to use a DualShock 4 Controller as the primary driver's controller.
  */
 public class OI {
-    public static Joystick throttle;
-    public static Joystick direction;
+    public static Joystick driver;
     public static Joystick partner;
     public static Button quickTurn;
     public static Button highGear;
@@ -22,17 +22,18 @@ public class OI {
     public static Button climber;
 
     public OI() {
-        throttle = new Joystick(Constants.LEFT_JOYSTICK_ID);
-        direction = new Joystick(Constants.RIGHT_JOYSTICK_ID);
+        driver = new Joystick(Constants.DRIVER_JOYSTICK_ID);
         partner = new Joystick(Constants.PARTNER_JOYSTICK_ID);
-        quickTurn = new JoystickButton(partner, 12);
-        highGear = new JoystickButton(direction, 1);
-        lowGear = new JoystickButton(throttle, 1);
+
+        highGear = new JoystickButton(driver, 5);
+        lowGear = new JoystickButton(driver, 6);
+
         shoot = new JoystickButton(partner, 4);
         disableShooter = new JoystickButton(partner, 1);
         increaseSpeed = new JoystickButton(partner, 0);
         decreaseSpeed = new JoystickButton(partner, 0);
         climber = new JoystickButton(partner, 0);
+
         highGear.whenPressed(new ShiftHigh());
         lowGear.whenPressed(new ShiftLow());
         shoot.whenPressed(new ShootHigh());
@@ -43,16 +44,22 @@ public class OI {
     }
 
     public static double getForwardThrottle(){
-        double sign = Math.signum(partner.getY());
-        return sign * Math.pow(partner.getY(), 2);
+        double input = -driver.getRawAxis(1);
+        double sign = Math.signum(input);
+        return sign * Math.pow(input, 2);
     }
 
     public static double getTurningThrottle(){
-        double sign = Math.signum(partner.getZ());
+        double input = driver.getRawAxis(2);
+        double sign = Math.signum(input);
         double forwardThrottleSign = Math.signum(getForwardThrottle());
         if(forwardThrottleSign == -1)
-            return sign * Math.pow(partner.getZ(), 2);
+            return sign * Math.pow(input, 2);
         else
-            return -sign * Math.pow(partner.getZ(), 2);
+            return -sign * Math.pow(input, 2);
+    }
+
+    public static boolean isQuickTurn(){
+        return Math.abs(getForwardThrottle()) < 0.1;
     }
 }

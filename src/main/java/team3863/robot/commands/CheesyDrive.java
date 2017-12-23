@@ -33,7 +33,7 @@ public class CheesyDrive extends Command {
      * scheduled to run until this Command either finishes or is canceled.
      */
     protected void execute() {
-        signal = cheesyDriveHelper.cheesyDrive(OI.getForwardThrottle(), OI.getTurningThrottle(), OI.quickTurn.get(), drivetrain.isHigh());
+        signal = cheesyDriveHelper.cheesyDrive(OI.getForwardThrottle(), OI.getTurningThrottle(), OI.isQuickTurn(), drivetrain.isHigh());
         drivetrain.setLeft(signal.getLeft());
         drivetrain.setRight(signal.getRight());
     }
